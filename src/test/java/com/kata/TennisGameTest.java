@@ -37,4 +37,10 @@ public class TennisGameTest {
         playerTwo.setPointScore( 2 );
         assertEquals( "Love Thirty", scoreBoard.getGameScore() );
     }
+
+    @Test
+    public void scoreShouldBeLoveFortyWhenPlayerTwoScoresThirdPoint() {
+        playerTwo.setPointScore( 3 );
+        assertEquals( "Love Forty", scoreBoard.getGameScore() );
+    }
 }
