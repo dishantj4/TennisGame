@@ -49,4 +49,11 @@ public class TennisGameTest {
         playerTwo.setPointScore( 4 );
         assertEquals( "Federer Wins", scoreBoard.getGameScore() );
     }
+
+    @Test
+    public void scoreShouldBeFifteenAllWhenBothPlayerHasSoredOnePointEach() {
+        playerOne.setPointScore( 1 );
+        playerTwo.setPointScore( 1 );
+        assertEquals( "Fifteen All", scoreBoard.getGameScore() );
+    }
 }
