@@ -5,6 +5,9 @@ public class ScoreBoard {
     private Player playerOne;
     private Player playerTwo;
     private String score = "Love All";
+    private static final String SPACE = " ";
+    private static final String ALL = "All";
+    private static final String WINS = "Wins";
 
     public ScoreBoard(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
@@ -16,13 +19,13 @@ public class ScoreBoard {
         if (isDeuce())
             score = String.valueOf( TennisPoints.Deuce );
         else if (isPlayerOneAdvantage())
-            score = playerOne.getName() + " " + TennisPoints.Advantage;
+            score = playerOne.getName() + SPACE + TennisPoints.Advantage;
         else if (playerOne.getPointScore() == playerTwo.getPointScore())
-            score = translateScore( playerOne.getPointScore() ) + " " + "All";
+            score = translateScore( playerOne.getPointScore() ) + SPACE + ALL;
         else if (isPlayerTwoWinner())
-            score = playerTwo.getName() + " " + "Wins";
+            score = playerTwo.getName() + SPACE + WINS;
         else
-            score = translateScore( playerOne.getPointScore() ) + " " + translateScore( playerTwo.getPointScore() );
+            score = translateScore( playerOne.getPointScore() ) + SPACE + translateScore( playerTwo.getPointScore() );
         return score;
     }
 
