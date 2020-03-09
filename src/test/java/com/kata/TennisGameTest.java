@@ -1,8 +1,9 @@
 package com.kata;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
 
 /**
  * Unit test for Simple  TennisGame.
@@ -22,12 +23,12 @@ public class TennisGameTest {
 
     @Test
     public void scoreShouldBeLoveAllAtStartOfGame() {
-        Assert.assertEquals( "Love All", scoreBoard.getGameScore() );
+        assertEquals( "Love All", scoreBoard.getGameScore() );
     }
 
     @Test
     public void scoreShouldBeLoveFifteenWhenPlayerTwoScoresFirstPoint() {
         playerTwo.setPointScore( 1 );
-        Assert.assertEquals( "Love Fifteen", scoreBoard.getGameScore() );
+        assertEquals( "Love Fifteen", scoreBoard.getGameScore() );
     }
 }
