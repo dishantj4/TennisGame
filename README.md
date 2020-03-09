@@ -30,7 +30,24 @@ This is an Practice program on simple tennis game using Test Driven Development
 
 ````
 
+# Prerequisite:
 
+````
+Jdk 1.7 or above
+IDE (Eclipse or Intellij)
+Maven 3.0
+````
+
+# How to run this App
+
+Follow below instructions to run this app
+````
+-git clone https://github.com/dishantj4/TennisGame.git
+-Go to src/test/java/com/kata/TennisGameTest.java and run the Junit Test case or run below maven command.
+
+$ mvn clean test
+
+````
 
 
 
