@@ -1,6 +1,7 @@
 package com.kata;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -8,11 +9,17 @@ import org.junit.Test;
  */
 public class TennisGameTest {
 
-    @Test
-    public void scoreShouldBeLoveAllAtStartOfGame() {
+    private ScoreBoard scoreBoard;
+
+    @Before
+    public void setUp() {
         Player playerOne = new Player( "Nadal", 0 );
         Player playerTwo = new Player( "Federer", 0 );
-        ScoreBoard scoreBoard = new ScoreBoard( playerOne, playerTwo );
+        scoreBoard = new ScoreBoard( playerOne, playerTwo );
+    }
+
+    @Test
+    public void scoreShouldBeLoveAllAtStartOfGame() {
         Assert.assertEquals( "Love All", scoreBoard.getGameScore() );
     }
 }
