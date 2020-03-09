@@ -15,13 +15,16 @@ public class ScoreBoard {
 
         if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 0)
             score = "Love All";
-        else if (playerTwo.getPointScore() > 3 && playerTwo.getPointScore() > playerOne.getPointScore() + 1)
+        else if (isPlayerTwoWinner())
             score = playerTwo.getName() + " " + "Wins";
         else
             score = translateScore( playerOne.getPointScore() ) + " " + translateScore( playerTwo.getPointScore() );
         return score;
     }
 
+    private Boolean isPlayerTwoWinner() {
+        return (playerTwo.getPointScore() > 3 && playerTwo.getPointScore() > playerOne.getPointScore() + 1);
+    }
     private TennisPoints translateScore(int pointScore) {
         switch (pointScore) {
             case 3:
