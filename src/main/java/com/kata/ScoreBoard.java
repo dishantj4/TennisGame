@@ -15,12 +15,22 @@ public class ScoreBoard {
 
         if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 0)
             score = "Love All";
-        if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 1)
-            score = "Love Fifteen";
-        if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 2)
-            score = "Love Thirty";
-        if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 3)
-            score = "Love Forty";
+        else
+            score = translateScore( playerOne.getPointScore() ) + " " + translateScore( playerTwo.getPointScore() );
         return score;
+    }
+
+    private TennisPoints translateScore(int pointScore) {
+        switch (pointScore) {
+            case 3:
+                return TennisPoints.Forty;
+            case 2:
+                return TennisPoints.Thirty;
+            case 1:
+                return TennisPoints.Fifteen;
+            case 0:
+                return TennisPoints.Love;
+        }
+        throw new IllegalArgumentException( "Invalid pointScore: " + pointScore );
     }
 }
