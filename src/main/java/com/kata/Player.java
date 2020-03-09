@@ -3,6 +3,11 @@ package com.kata;
 public class Player {
 
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
     private int pointScore;
 
     public void setPointScore(int pointScore) {

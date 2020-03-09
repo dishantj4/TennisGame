@@ -15,6 +15,8 @@ public class ScoreBoard {
 
         if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 0)
             score = "Love All";
+        else if (playerTwo.getPointScore() > 3 && playerTwo.getPointScore() > playerOne.getPointScore() + 1)
+            score = playerTwo.getName() + " " + "Wins";
         else
             score = translateScore( playerOne.getPointScore() ) + " " + translateScore( playerTwo.getPointScore() );
         return score;
