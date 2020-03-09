@@ -63,4 +63,11 @@ public class TennisGameTest {
         playerTwo.setPointScore( 3 );
         assertEquals( "Deuce", scoreBoard.getGameScore() );
     }
+
+    @Test
+    public void scoreShouldBePlayerOneAdvantageWhenPlayerOneScoresPointPostDeuce() {
+        playerOne.setPointScore( 4 );
+        playerTwo.setPointScore( 3 );
+        assertEquals( "Nadal Advantage", scoreBoard.getGameScore() );
+    }
 }

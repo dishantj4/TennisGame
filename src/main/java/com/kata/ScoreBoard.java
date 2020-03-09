@@ -15,6 +15,8 @@ public class ScoreBoard {
 
         if (isDeuce())
             score = String.valueOf( TennisPoints.Deuce );
+        else if (isPlayerOneAdvantage())
+            score = playerOne.getName() + " " + TennisPoints.Advantage;
         else if (playerOne.getPointScore() == playerTwo.getPointScore())
             score = translateScore( playerOne.getPointScore() ) + " " + "All";
         else if (isPlayerTwoWinner())
@@ -30,6 +32,10 @@ public class ScoreBoard {
 
     private Boolean isDeuce() {
         return (playerTwo.getPointScore() > 2 && playerTwo.getPointScore() == playerOne.getPointScore());
+    }
+
+    private Boolean isPlayerOneAdvantage() {
+        return (playerOne.getPointScore() > 2 && playerOne.getPointScore() > playerTwo.getPointScore());
     }
 
     private TennisPoints translateScore(int pointScore) {
