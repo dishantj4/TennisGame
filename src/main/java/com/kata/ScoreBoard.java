@@ -13,7 +13,9 @@ public class ScoreBoard {
 
     public String getGameScore() {
 
-        if (playerOne.getPointScore() == playerTwo.getPointScore())
+        if (isDeuce())
+            score = "Deuce";
+        else if (playerOne.getPointScore() == playerTwo.getPointScore())
             score = translateScore( playerOne.getPointScore() ) + " " + "All";
         else if (isPlayerTwoWinner())
             score = playerTwo.getName() + " " + "Wins";
@@ -25,6 +27,11 @@ public class ScoreBoard {
     private Boolean isPlayerTwoWinner() {
         return (playerTwo.getPointScore() > 3 && playerTwo.getPointScore() > playerOne.getPointScore() + 1);
     }
+
+    private Boolean isDeuce() {
+        return (playerTwo.getPointScore() > 2 && playerTwo.getPointScore() == playerOne.getPointScore());
+    }
+
     private TennisPoints translateScore(int pointScore) {
         switch (pointScore) {
             case 3:

@@ -56,4 +56,11 @@ public class TennisGameTest {
         playerTwo.setPointScore( 1 );
         assertEquals( "Fifteen All", scoreBoard.getGameScore() );
     }
+
+    @Test
+    public void scoreShouldBeDeuceWhenBothPlayerHasSoredThreePointEach() {
+        playerOne.setPointScore( 3 );
+        playerTwo.setPointScore( 3 );
+        assertEquals( "Deuce", scoreBoard.getGameScore() );
+    }
 }
