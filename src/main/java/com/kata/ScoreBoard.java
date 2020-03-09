@@ -15,6 +15,8 @@ public class ScoreBoard {
 
         if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 0)
             score = "Love All";
+        if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 1)
+            score = "Love Fifteen";
 
         return score;
     }
