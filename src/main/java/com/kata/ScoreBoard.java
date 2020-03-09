@@ -14,7 +14,7 @@ public class ScoreBoard {
     public String getGameScore() {
 
         if (isDeuce())
-            score = "Deuce";
+            score = String.valueOf( TennisPoints.Deuce );
         else if (playerOne.getPointScore() == playerTwo.getPointScore())
             score = translateScore( playerOne.getPointScore() ) + " " + "All";
         else if (isPlayerTwoWinner())
