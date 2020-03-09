@@ -77,4 +77,11 @@ public class TennisGameTest {
         playerTwo.setPointScore( 4 );
         assertEquals( "Federer Advantage", scoreBoard.getGameScore() );
     }
+
+    @Test
+    public void scoreShouldBePlayerOneWinsWhenPlayerOneScoresConsecutivePointsPostDeuce() {
+        playerOne.setPointScore( 5 );
+        playerTwo.setPointScore( 3 );
+        assertEquals( "Nadal Wins", scoreBoard.getGameScore() );
+    }
 }

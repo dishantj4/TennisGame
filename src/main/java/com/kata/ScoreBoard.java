@@ -16,14 +16,17 @@ public class ScoreBoard {
 
     public String getGameScore() {
 
+
         if (isDeuce())
             score = String.valueOf( TennisPoints.Deuce );
+        else if (isPlayerTwoWinner())
+            score = playerTwo.getName() + SPACE + WINS;
+        else if (isPlayerOneWinner())
+            score = playerOne.getName() + SPACE + WINS;
         else if (hasAdvantage())
             return advantagePlayerName() + " " + TennisPoints.Advantage;
         else if (playerOne.getPointScore() == playerTwo.getPointScore())
             score = translateScore( playerOne.getPointScore() ) + SPACE + ALL;
-        else if (isPlayerTwoWinner())
-            score = playerTwo.getName() + SPACE + WINS;
         else
             score = translateScore( playerOne.getPointScore() ) + SPACE + translateScore( playerTwo.getPointScore() );
         return score;
@@ -31,6 +34,10 @@ public class ScoreBoard {
 
     private Boolean isPlayerTwoWinner() {
         return (playerTwo.getPointScore() > 3 && playerTwo.getPointScore() > playerOne.getPointScore() + 1);
+    }
+
+    private Boolean isPlayerOneWinner() {
+        return (playerOne.getPointScore() > 3 && playerOne.getPointScore() > playerTwo.getPointScore() + 1);
     }
 
     private Boolean isDeuce() {
