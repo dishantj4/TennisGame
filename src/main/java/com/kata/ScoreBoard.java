@@ -4,7 +4,7 @@ public class ScoreBoard {
 
     private Player playerOne;
     private Player playerTwo;
-    private String score;
+    private String score = "Love All";
 
     public ScoreBoard(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
@@ -13,10 +13,8 @@ public class ScoreBoard {
 
     public String getGameScore() {
 
-        if (playerOne.getPointScore() == 0 && playerTwo.getPointScore() == 0)
-            score = "Love All";
-        else if (playerOne.getPointScore() == 1 && playerTwo.getPointScore() == 1)
-            score = "Fifteen All";
+        if (playerOne.getPointScore() == playerTwo.getPointScore())
+            score = translateScore( playerOne.getPointScore() ) + " " + "All";
         else if (isPlayerTwoWinner())
             score = playerTwo.getName() + " " + "Wins";
         else
