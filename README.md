@@ -10,7 +10,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [How to run this App](#how-to-run-this-app)
-  * [Expected Result](#Expected Result)
+  * [Expected Result](#expected-result)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -38,7 +38,7 @@ This is an Practice program on simple tennis game using Test Driven Development
 ## Functional Case
 
 ````
-Assumption
+*Lets Say
 Player One = "Nadal"
 Player Two = "Federer"
 
@@ -47,8 +47,9 @@ Player Two = "Federer"
 -Should return game score as "Thirty Love" when player one wins first point
 -Should return game score as "Forty Love" when player one wins first point
 -Should return game score as "Nadal Wins"  when player one wins 4 and player two wins 2 points
--Should return game score as "Deuce" when at least three points have been scored by each player, and the scores are equal
--Should return game score as "Nadal Advantage" when  player one scores one point post deuce
+-Should return game score as "Deuce" when at least three points have been scored by each player
+ and the scores are equal
+-Should return game score as "Federer Advantage" when  player one scores one point post deuce
 -Should return game score as "Federer Wins"  when player two wins 4 and player two wins 2 points
 
 ````
