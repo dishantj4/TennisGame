@@ -1,5 +1,5 @@
 
-<h3 align="center">Tennis Game</h3>
+<h1 align="center">Tennis Game</h1>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -78,7 +78,7 @@ $ mvn clean test
 <!-- Expected Result -->
 ### Expected Result
 
-Below is one of the example of expected result on ScoreBoard
+Below are few example of expected result on ScoreBoard
 ````
 "Love All"
 "Love Fifteen"
