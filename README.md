@@ -7,6 +7,7 @@
 * [About the Project](#about-the-project)
 * [Purpose](#purpose)
 * [Functional Case](#functional-case)
+* [Architecture Diagrams](#architecture-diagrams)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [How to run this App](#how-to-run-this-app)
@@ -53,6 +54,17 @@ Player Two = "Federer"
 -Should return game score as "Federer Wins"  when player two wins 4 and player two wins 2 points
 
 ````
+
+
+<!-- Architecture Diagrams -->
+## Architecture Diagrams
+
+![Alt text](https://yuml.me/dj/d6f7db8c.svg)
+<img src="https://yuml.me/dj/d6f7db8c.svg">
+
+<!-- Getting Started -->
+## Getting Started
+
 
 <!-- Prerequisite -->
 ### Prerequisite
