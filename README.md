@@ -59,8 +59,7 @@ Player Two = "Federer"
 <!-- Architecture Diagrams -->
 ## Architecture Diagrams
 
-![Alt text](https://yuml.me/dj/d6f7db8c.svg)
-<img src="https://yuml.me/dj/d6f7db8c.svg">
+<img src="https://yuml.me/dj/0a6c13b8.svg">
 
 <!-- Getting Started -->
 ## Getting Started
